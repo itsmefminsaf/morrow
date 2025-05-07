@@ -38,6 +38,7 @@ const signIn = async (prevState: formState, formData: FormData) => {
     await createSession(email);
   } catch (error) {
     console.log("Error in sign-up action: ", error);
+    formState.error = "Sorry, Something went wrong";
     return formState;
   }
 
