@@ -58,8 +58,8 @@ const SignUpPage = () => {
             className="auth-submit-button"
             disabled={isPending}
           />
-          <Link href="/auth/login" className="auth-change-link">
-            Login
+          <Link href="/auth/sign-in" className="auth-change-link">
+            Sign-in
           </Link>
         </div>
       </form>
