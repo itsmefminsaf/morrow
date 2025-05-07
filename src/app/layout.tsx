@@ -12,9 +12,7 @@ const roboto = Roboto();
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <html lang="en">
-      <body className={`${roboto.className} bg-zinc-950 font-sans`}>
-        {children}
-      </body>
+      <body className={`${roboto.className} bg-zinc-950`}>{children}</body>
     </html>
   );
 };

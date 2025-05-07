@@ -1,24 +1,21 @@
-import LogOut from "@/components/buttons/LogOut";
-import findUser from "@/lib/findUser";
+import { cookies } from "next/headers";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 const RootPage = async () => {
-  const user = await findUser();
+  const session = (await cookies()).get("session_id");
+  if (session) redirect("/dashboard");
   return (
-    <main className="flex h-screen w-screen flex-col items-center justify-center gap-5">
-      {user ? (
-        <>
-          <h1 className="text-3xl font-extrabold text-white">
-            Welcome {user?.name}
-          </h1>
-          <LogOut />
-        </>
-      ) : (
+    <>
+      <main className="flex h-screen w-screen flex-col items-center justify-center gap-5">
         <Link className="rounded-2xl bg-white px-4 py-2" href="/auth/sign-up">
           Sign up
         </Link>
-      )}
-    </main>
+        <Link className="rounded-2xl bg-white px-4 py-2" href="/auth/sign-in">
+          Sign in
+        </Link>
+      </main>
+    </>
   );
 };
 

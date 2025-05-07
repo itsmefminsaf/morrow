@@ -16,4 +16,8 @@
   .auth-form-error {
     @apply rounded-lg bg-red-500/50 px-3 py-1;
   }
+
+  .dashboard-section {
+    @apply w-full rounded-xl bg-zinc-900/50 p-2 backdrop-blur-2xl;
+  }
 }
