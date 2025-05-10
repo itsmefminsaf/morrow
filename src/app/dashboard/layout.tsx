@@ -9,9 +9,11 @@ export const metadata: Metadata = {
 };
 
 const DashboardLayout = async ({
+  children,
   header,
   nav,
 }: {
+  children: React.ReactNode;
   header: React.ReactNode;
   nav: React.ReactNode;
 }) => {
@@ -24,6 +26,7 @@ const DashboardLayout = async ({
   if (!user) redirect("/auth/sign-in?logout=true");
   return (
     <main className="grid h-screen w-screen grid-cols-2 gap-2 p-2 text-white">
+      {children}
       <LayoutDataProvider user={user}>
         {header}
         {nav}

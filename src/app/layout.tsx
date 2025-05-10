@@ -1,11 +1,6 @@
-import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import React from "react";
-
-export const metadata: Metadata = {
-  title: "Morrow",
-};
 
 const roboto = Roboto();
 
