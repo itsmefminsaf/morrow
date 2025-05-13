@@ -21,3 +21,12 @@
     @apply w-full rounded-xl bg-zinc-900/50 p-2 backdrop-blur-2xl;
   }
 }
+
+@utilities {
+  width-screen {
+    width: 100dvw;
+  }
+  height-screen {
+    height: 100dvh;
+  }
+}
