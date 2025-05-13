@@ -25,7 +25,7 @@ const DashboardLayout = async ({
 
   if (!user) redirect("/auth/sign-in?logout=true");
   return (
-    <main className="grid h-screen w-screen grid-cols-2 gap-2 p-2 text-white">
+    <main className="grid grid-cols-2 gap-2 p-2 text-white">
       {children}
       <LayoutDataProvider user={user}>
         {header}

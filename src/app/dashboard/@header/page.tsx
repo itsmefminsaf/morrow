@@ -10,7 +10,7 @@ const Header = () => {
   if (!user) throw new Error("Session not found");
 
   return (
-    <header className="col-span-2 flex items-center justify-center gap-2">
+    <header className="col-span-2 flex gap-2">
       <h1 className="dashboard-section flex w-fit items-center justify-center gap-2 text-xl font-extrabold">
         <button
           onClick={() => {
@@ -21,7 +21,7 @@ const Header = () => {
         </button>
         Morrow
       </h1>
-      <h1 className="dashboard-section max-w-fit truncate text-xl font-extrabold">
+      <h1 className="dashboard-section truncate text-xl font-extrabold">
         Welcome {user.name}
       </h1>
     </header>
