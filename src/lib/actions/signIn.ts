@@ -42,7 +42,7 @@ const signIn = async (prevState: formState, formData: FormData) => {
     return formState;
   }
 
-  redirect("/");
+  redirect("/dashboard");
 };
 
 export default signIn;

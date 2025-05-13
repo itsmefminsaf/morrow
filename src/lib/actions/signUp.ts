@@ -50,7 +50,7 @@ const signUp = async (prevState: formState, formData: FormData) => {
     return formState;
   }
 
-  redirect("/");
+  redirect("/dashboard");
 };
 
 export default signUp;
