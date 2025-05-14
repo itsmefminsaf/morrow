@@ -12,10 +12,12 @@ const DashboardLayout = async ({
   children,
   header,
   nav,
+  steaks,
 }: {
   children: React.ReactNode;
   header: React.ReactNode;
   nav: React.ReactNode;
+  steaks: React.ReactNode;
 }) => {
   const session = (await cookies()).get("session_id")?.value;
 
@@ -29,6 +31,7 @@ const DashboardLayout = async ({
       {children}
       <LayoutDataProvider user={user}>
         {header}
+        {steaks}
         {nav}
       </LayoutDataProvider>
     </main>
